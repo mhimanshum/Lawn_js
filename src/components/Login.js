@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Images from './images.jpg';
-import axios from 'axios';
+import { client } from '../api';
 
 function Login() {
   const [details, setDetails] = useState({});
@@ -8,10 +8,7 @@ function Login() {
     event.preventDefault();
     try {
       console.log('apple');
-      const res = await axios.post(
-        'http://localhost:8080/users/login',
-        details,
-      );
+      const res = await client.post('/users/login', details);
       console.log(res);
     } catch (error) {
       console.log(error);
