@@ -40,7 +40,7 @@ function Login() {
               onChange={(e) =>
                 setDetails((prevState) => ({
                   ...prevState,
-                  passowrd: e.target.value,
+                  password: e.target.value,
                 }))
               }
               placeholder="Enter Your Password"

@@ -47,7 +47,7 @@ function SignUp() {
               onChange={(e) =>
                 setDetails((prevState) => ({
                   ...prevState,
-                  address: e.target.value,
+                  email: e.target.value,
                 }))
               }
             ></input>
