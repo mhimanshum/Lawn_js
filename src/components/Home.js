@@ -5,8 +5,8 @@ import p3 from './p3.jpg';
 import axios from 'axios';
 
 function Home() {
-  const [photos, setPhotos] = useState([]);
-  const handleSearch = async (search) => {
+  const [corouselPhotos, setCorouselPhotos] = useState([]);
+  const handleSearch = async () => {
     try {
       const { data } = await axios.get(
         'https://api.pexels.com/v1/search?query=wedding',
@@ -17,8 +17,15 @@ function Home() {
           },
         },
       );
-      console.log(data);
-      setPhotos(data);
+      setCorouselPhotos(data.photos[0]);
+      let i = 1;
+      setInterval(() => {
+        if (i > data.photos.length) {
+          i = 0;
+        }
+        setCorouselPhotos(data.photos[i]);
+        i++;
+      }, 5000);
     } catch (err) {
       console.log(err);
     }
@@ -29,12 +36,14 @@ function Home() {
   return (
     <>
       <div>
-        <div>
-          {photos?.photos?.map((photo) => {
-            return <img src={photo?.src?.landscape} alt={photo?.alt} />;
-          })}
+        <div className="flex justify-center items-center mt-24">
+          <img
+            src={corouselPhotos?.src?.landscape}
+            alt={corouselPhotos?.alt}
+            className="shadow-2xl shadow-black rounded-xl object-cover"
+          />
         </div>
-        <div className=" flex gap-7 justify-between ml-20 mr-20 mt-20">
+        <div className=" flex gap-7 justify-between ml-20 mr-20 mt-52">
           <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-96 h-80">
             <img src={p1} alt="p1" className="min-h-full"></img>
           </div>

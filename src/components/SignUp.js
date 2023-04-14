@@ -1,5 +1,5 @@
-import axios from 'axios';
 import React, { useState } from 'react';
+import { client } from '../api';
 
 function SignUp() {
   const [details, setDetails] = useState({});
@@ -7,16 +7,7 @@ function SignUp() {
     event.preventDefault();
     try {
       console.log('apple');
-      const res = await axios.post(
-        'http://192.168.157.25:8080/users/signup',
-        details,
-        {
-          headers: {
-            mode: 'no-cors',
-            'Access-Control-Allow-Origin': '*',
-          },
-        },
-      );
+      const res = await client.post('/users/signup', details);
       console.log(res);
     } catch (error) {
       console.log(error);
