@@ -1,46 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import Images from './images.jpg';
-import { client } from '../api';
+import React, { useState } from 'react';
+import admin from './admin.png';
+import { client } from '../../api';
 
-function Login() {
+function Admin() {
   const [details, setDetails] = useState({});
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-
   const onSubmit = async (event) => {
     event.preventDefault();
-    setMessage(undefined);
-    setError(undefined);
     try {
-      const res = await client.post('/users/login', details);
-      setMessage(res.data.message);
-      console.log(res.data.message);
+      console.log('apple');
+      const res = await client.post('/employies/login', details);
+      console.log(res);
     } catch (error) {
       console.log(error);
-      setError(error.response.data.error);
-      console.log(error.response.data.error);
     }
   };
-
   return (
     <>
       <form>
-        <div className="flex justify-center">
-          <div className="relative shadow-lg shadow-black rounded-2xl w-96 h-96 mt-16 border-2 border-black  flex justify-center bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
+        <div className="flex justify-center bg-gradient-to-t from-sky-400 to-cyan-300 min-h-screen">
+          <div className="relative shadow-lg shadow-black rounded-2xl w-96 h-96 mt-16 border-2 border-black  flex justify-center bg-gradient-to-r from-red-600 via-red-700 to-red-900">
             <img
-              src={Images}
+              src={admin}
               alt="Logo"
-              className=" absolute rounded-full w-28 h-28 mt-10"
+              className=" absolute rounded-full w-28 h-28 mt-5"
             ></img>
-            <div className="absolute flex justify-center mt-3">
-              {message && (
-                <h1 className="text-lg font-serif font-semibold">{message}</h1>
-              )}
-              {error && (
-                <h1 className="text-lg font-serif font-bold">{error}</h1>
-              )}
-            </div>
-
             <input
               onChange={(e) =>
                 setDetails((prevState) => ({
@@ -68,9 +51,9 @@ function Login() {
             <button
               onClick={onSubmit}
               type="submit"
-              className="w-36 h-10 rounded-3xl font-serif font-bold text-white hover:bg-yellow-700 bg-blue-900 mt-64"
+              className="w-36 h-10 rounded-3xl font-serif font-bold text-white hover:bg-yellow-700 bg-black mt-64"
             >
-              Submit
+              Admin Login
             </button>
           </div>
         </div>
@@ -79,4 +62,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Admin;

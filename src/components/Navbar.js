@@ -28,7 +28,14 @@ function Navbar() {
           Signup
         </Link>
         <Link
-          className="shadow-sm shadow-black border-2 rounded-lg w-24  transition ease-in-out delay-50 bg-gray-700 hover:-translate-y-1 hover:scale-75 hover:bg-red-500 text-white duration-300 ..."
+          className=" hover:-translate-y-1 hover:scale-90 hover:text-black duration-300 ..."
+          to="/admin"
+        >
+          Admin
+        </Link>
+        <Link
+          className="shadow-sm shadow-black border-2 rounded-lg w-24  transition ease-in-out delay-50 bg-gray-700 hover:-translate-y-1 hover:scale-110      
+          hover:bg-red-500 text-white duration-300 ..."
           to="/contact"
         >
           Contact

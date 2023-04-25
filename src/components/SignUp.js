@@ -17,7 +17,7 @@ function SignUp() {
     <div className=" relative flex justify-center">
       <div className="absolute shadow-lg shadow-black flex bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 h-96 border-2 rounded-2xl mt-14 border-black justify-center">
         <form>
-          <div className="flex justify-center mt-10 gap-3 ">
+          <div className="flex justify-center mt-10 gap-3  ml-10 mr-10 ">
             <input
               placeholder="Please Enter Your Name"
               required
