@@ -8,7 +8,6 @@ function AdminDashboard() {
   const handleDashboard = async () => {
     try {
       const res = await client.get('/categories');
-      console.log(res);
       setCategories(res.data.categories);
     } catch (error) {
       console.log(error);

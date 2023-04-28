@@ -43,7 +43,7 @@ function Home() {
             className="shadow-2xl shadow-black rounded-xl object-cover"
           />
         </div>
-        <div className=" flex gap-7 justify-between ml-20 mr-20 mt-40">
+        <div className=" flex gap-7 justify-between ml-20 mr-20 mt-40 pb-10">
           <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-96 h-80">
             <img src={p1} alt="p1" className="min-h-full"></img>
           </div>
