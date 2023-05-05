@@ -38,13 +38,13 @@ function Footer() {
                 Inflection Org
               </a>
             </h3>
-            <div className="flex text-white gap-5 text-3xl font-extrabold">
-              <h1 className="animate-spin">@</h1>
-              <h1 className="animate-bounce">@</h1>
-              <h1 className="animate-bounce">@</h1>
-              <h1 className="animate-bounce">@</h1>
-              <h1 className="animate-bounce">@</h1>
-              <h1 className="animate-spin">@</h1>
+            <div className="flex text-white gap-5 text-xs font-extrabold">
+              <h1 className="animate-spin">.</h1>
+              <h1 className="animate-bounce">.</h1>
+              <h1 className="animate-bounce">.</h1>
+              <h1 className="animate-bounce">.</h1>
+              <h1 className="animate-bounce">.</h1>
+              <h1 className="animate-spin">.</h1>
             </div>
             <div className="mr-5">
               <Link

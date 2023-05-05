@@ -25,7 +25,7 @@ function Home() {
         }
         setCorouselPhotos(data.photos[i]);
         i++;
-      }, 5000);
+      }, 10000);
     } catch (err) {
       console.log(err);
     }

@@ -14,11 +14,8 @@ function Login() {
     try {
       const res = await client.post('/users/login', details);
       setMessage(res.data.message);
-      console.log(res.data.message);
     } catch (error) {
-      console.log(error);
       setError(error.response.data.error);
-      console.log(error.response.data.error);
     }
   };
 

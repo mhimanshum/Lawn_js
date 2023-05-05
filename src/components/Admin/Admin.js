@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import admin from './admin.png';
 import { client } from '../../api';
+import { useNavigate } from 'react-router-dom';
 
 function Admin() {
   const [details, setDetails] = useState({});
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
   const onSubmit = async (event) => {
     event.preventDefault();
+    setMessage(undefined);
+    setError(undefined);
     try {
       console.log('apple');
-      const res = await client.post('/employies/login', details);
-      console.log(res);
+      const res = await client.post('/emploies/login', details);
+      setMessage(res.data.message);
+      navigate('/adminDashboard');
     } catch (error) {
-      console.log(error);
+      setError(error.response.data.error);
     }
   };
   return (
@@ -22,7 +30,7 @@ function Admin() {
             <img
               src={admin}
               alt="Logo"
-              className=" absolute rounded-full w-28 h-28 mt-5"
+              className=" absolute rounded-full w-28 h-28 mt-7"
             ></img>
             <input
               onChange={(e) =>
@@ -55,6 +63,14 @@ function Admin() {
             >
               Admin Login
             </button>
+            <div className="absolute flex justify-center mn-0 pb-0">
+              {message && (
+                <h1 className="text-lg font-serif font-semibold">{message}</h1>
+              )}
+              {error && (
+                <h1 className="text-lg font-serif font-bold">{error}</h1>
+              )}
+            </div>
           </div>
         </div>
       </form>
