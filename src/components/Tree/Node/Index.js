@@ -3,7 +3,7 @@ import React from 'react';
 function Node({ item, selected, hasChildren, level, onToggle }) {
   return (
     <div style={{ paddingLeft: `${level * 16}px` }}>
-      {item.label}
+      {item.name}
       {hasChildren && (
         <button
           onClick={onToggle}

@@ -1,13 +1,17 @@
-import React from 'react';
 import Branch from './Branch/Index';
 
-function Tree({ data }) {
+function Tree({ categories }) {
+  console.log(categories);
   return (
-    <div>
-      {data.map((item, index) => (
-        <Branch key={index} item={item} level={0} />
-      ))}
-    </div>
+    <>
+      {categories?.length > 0 && (
+        <div>
+          {categories?.map((el) => (
+            <Branch key={el.id} item={el} level={0} />
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 

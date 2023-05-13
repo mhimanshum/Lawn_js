@@ -29,15 +29,6 @@ function Login() {
               alt="Logo"
               className=" absolute rounded-full w-28 h-28 mt-10"
             ></img>
-            <div className="absolute flex justify-center mt-3">
-              {message && (
-                <h1 className="text-lg font-serif font-semibold">{message}</h1>
-              )}
-              {error && (
-                <h1 className="text-lg font-serif font-bold">{error}</h1>
-              )}
-            </div>
-
             <input
               onChange={(e) =>
                 setDetails((prevState) => ({
@@ -69,6 +60,14 @@ function Login() {
             >
               Submit
             </button>
+          </div>
+        </div>
+        <div className="flex justify-center mt-5">
+          <div className="absolute flex justify-center mt-3 border w-60 border-black">
+            {message && (
+              <h1 className="text-lg font-serif font-semibold">{message}</h1>
+            )}
+            {error && <h1 className="text-lg font-serif font-bold">{error}</h1>}
           </div>
         </div>
       </form>

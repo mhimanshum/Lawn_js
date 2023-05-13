@@ -63,7 +63,9 @@ function Admin() {
             >
               Admin Login
             </button>
-            <div className="absolute flex justify-center mn-0 pb-0">
+          </div>
+          <div className="flex justify-center mt-5">
+            <div className="absolute flex justify-center mt-3 border w-60 border-black">
               {message && (
                 <h1 className="text-lg font-serif font-semibold">{message}</h1>
               )}
