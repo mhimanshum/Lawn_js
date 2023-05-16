@@ -48,7 +48,9 @@ function AdminDashboard() {
   }, []);
   return (
     <>
-      <Tree categories={categories} />
+      <div className="mt-20">
+        <Tree categories={categories} />
+      </div>
     </>
   );
 }
