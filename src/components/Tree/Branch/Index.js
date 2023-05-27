@@ -8,7 +8,7 @@ function Branch({ item, level }) {
   const renderBranches = () => {
     if (hasChildren) {
       const newLevel = level + 1;
-
+      console.log(item.children);
       return item.children.map((child, index) => {
         return <Branch key={index} item={child} level={newLevel} />;
       });

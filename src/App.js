@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="bg-gradient-to-b from-pink-300 via-purple-300 to-indigo-400 min-h-screen">
       <Navbar />
-      <main className="min-h-screen">
+      <main className="min-h-screen ">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

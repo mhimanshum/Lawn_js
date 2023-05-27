@@ -53,7 +53,7 @@ function SignUp() {
               onChange={(e) =>
                 setDetails((prevState) => ({
                   ...prevState,
-                  contactNo: e.target.value,
+                  phone: e.target.value,
                 }))
               }
             ></input>
@@ -66,7 +66,7 @@ function SignUp() {
               onChange={(e) =>
                 setDetails((prevState) => ({
                   ...prevState,
-                  altNo: e.target.value,
+                  alt_phone: e.target.value,
                 }))
               }
             ></input>
