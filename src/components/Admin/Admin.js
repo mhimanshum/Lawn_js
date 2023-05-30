@@ -25,8 +25,8 @@ function Admin() {
   return (
     <>
       <form>
-        <div className="flex justify-center bg-gradient-to-t from-sky-400 to-cyan-300 min-h-screen">
-          <div className="relative shadow-lg shadow-black rounded-2xl w-96 h-96 mt-16 border-2 border-black  flex justify-center bg-gradient-to-r from-red-600 via-red-700 to-red-900">
+        <div className="relative flex justify-center bg-gradient-to-t from-sky-400 to-cyan-300 min-h-screen">
+          <div className="absolute shadow-lg shadow-black rounded-2xl w-96 h-96 mt-16 border-2 border-black  flex justify-center bg-gradient-to-r from-red-600 via-red-700 to-red-900">
             <img
               src={admin}
               alt="Logo"
@@ -63,15 +63,17 @@ function Admin() {
             >
               Admin Login
             </button>
-          </div>
-          <div className="flex justify-center mt-5">
-            <div className="absolute flex justify-center mt-3 border w-60 border-black">
-              {message && (
-                <h1 className="text-lg font-serif font-semibold">{message}</h1>
-              )}
-              {error && (
-                <h1 className="text-lg font-serif font-bold">{error}</h1>
-              )}
+            <div className="mt-96 absolute flex justify-center">
+              <div className=" flex justify-center mt-3 border w-60 border-black">
+                {message && (
+                  <h1 className="text-lg font-serif font-semibold">
+                    {message}
+                  </h1>
+                )}
+                {error && (
+                  <h1 className="text-lg font-serif font-bold">{error}</h1>
+                )}
+              </div>
             </div>
           </div>
         </div>
