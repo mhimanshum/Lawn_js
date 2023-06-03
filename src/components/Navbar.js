@@ -56,9 +56,7 @@ function Navbar() {
       </div>
       <div onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-3xl">
         <HiOutlineMenu />
-        {/* <div
-          className={!isOpen ? 'hidden' : 'bg-gray-600 pt-20 w-96'}
-        ></div> */}
+        <div className={!isOpen ? 'hidden' : 'bg-gray-600 pt-20 w-96'}></div>
       </div>
     </div>
   );
