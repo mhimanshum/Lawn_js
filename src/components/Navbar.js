@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HiHome } from 'react-icons/hi';
+import { HiOutlineMenu } from 'react-icons/hi';
 
 function Navbar() {
   const location = useLocation();
-  console.log(location);
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-neutral-100 shadow-md shadow-black w-full h-20 flex items-center justify-between">
-      <div className="font-serif text-black font-bold text-2xl pl-5">
+    <div className="sticky top-0 bg-neutral-100 shadow-md shadow-black w-full h-20 flex items-center justify-between">
+      <div className=" font-serif text-black font-bold text-2xl pl-5">
         <h1 direction="right">Maurya Wedding Lawn</h1>
       </div>
       <div className="text-gray-500 pr-5 flex gap-10 text-center items-center  font-serif font-bold hover:cursor-pointer">
@@ -52,6 +53,12 @@ function Navbar() {
         >
           Contact
         </Link>
+      </div>
+      <div onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-3xl">
+        <HiOutlineMenu />
+        {/* <div
+          className={!isOpen ? 'hidden' : 'bg-gray-600 pt-20 w-96'}
+        ></div> */}
       </div>
     </div>
   );

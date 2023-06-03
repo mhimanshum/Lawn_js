@@ -41,7 +41,7 @@ function Home() {
   }, []);
   return (
     <>
-      <div className="my-5 px-3">
+      <div className="my-5 px-3 ">
         {isLoading ? (
           <div className="flex justify-center items-center h-screen">
             <div class="flex items-center justify-center ">
