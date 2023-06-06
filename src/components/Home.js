@@ -41,9 +41,9 @@ function Home() {
   }, []);
   return (
     <>
-      <div className="my-5 px-3 ">
+      <div className="px-0">
         {isLoading ? (
-          <div className="flex justify-center items-center h-screen">
+          <div className="flex justify-center items-center min-h-full min-w-full">
             <div class="flex items-center justify-center ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,21 +68,21 @@ function Home() {
             ) : (
               <>
                 <div>
-                  <div className="flex justify-center items-center mt-24">
+                  <div className="flex justify-center items-center py-10 px-10">
                     <img
                       src={corouselPhotos?.src?.landscape}
                       alt={corouselPhotos?.alt}
-                      className="shadow-2xl shadow-black rounded-xl object-cover"
+                      className="shadow-2xl shadow-black rounded-xl w-full object-cover"
                     />
                   </div>
-                  <div className=" flex gap-7 justify-between ml-20 mr-20 mt-40 pb-10">
-                    <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-96 h-80">
+                  <div className=" md:flex gap-7 md:justify-center ml-20 mr-20 pb-10">
+                    <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-60 h-60 md:w-96 md:h-80">
                       <img src={p1} alt="p1" className="min-h-full"></img>
                     </div>
-                    <div className="  bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-96 h-80">
+                    <div className="mt-10  bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-60 h-60 md:w-96 md:h-80">
                       <img src={p2} alt="p2" className="min-h-full"></img>
                     </div>
-                    <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black  w-96 h-80">
+                    <div className="mt-10 bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black  w-60 h-60 md:w-96 md:h-80">
                       <img src={p3} alt="p3" className="min-h-full"></img>
                     </div>
                   </div>
