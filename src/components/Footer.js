@@ -12,7 +12,7 @@ function Footer() {
             <h1 className="absolute font-sans text-white font-bold text-2xl mt-3">
               Developed By Himanshu Maurya
             </h1>
-            <h3 className="absolute font-mono text-white text-center w-80 mt-16">
+            <h3 className="absolute font-mono text-white text-center w-80 h-28 md:w-80  mt-16">
               Good code is its own best documentation. As you’re about to add a
               comment, ask yourself, “How can I improve the code so that this
               comment isn’t needed?” Improve the code and then document it to
@@ -28,8 +28,8 @@ function Footer() {
           </div>
         </div>
         <div>
-          <div className="w-full flex justify-between bg-black h-12 items-center gap-2">
-            <h3 className="ml-5 font-semibold text-white">
+          <div className="w-full flex justify-between bg-black h-20 items-center gap-2">
+            <h3 className="md:ml-5 ml-2 font-semibold text-white">
               Copyright @2023{' || '}
               <a
                 className="text-white font-bold hover:text-cyan-500"
@@ -46,7 +46,7 @@ function Footer() {
               <h1 className="animate-bounce">.</h1>
               <h1 className="animate-spin">.</h1>
             </div>
-            <div className="mr-5">
+            <div className="md:mr-5 mr-2 text-sm md:text-xl ">
               <Link
                 to="/"
                 className="text-white mr-5 font-bold hover:text-cyan-500"

@@ -11,8 +11,8 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex justify-between items-center h-24 w-full mx-auto px-4">
-      <h1 className="w-full text-xl md:text-3xl font-bold text-black">
+    <div className="shadow-lg shadow-black z-50 flex justify-between bg-gradient-to-t from-pink-300 via-purple-300 to-indigo-400 items-center h-24 w-full mx-auto px-4 sticky top-0">
+      <h1 className="w-full font-serif text-xl md:text-3xl font-bold text-black">
         Maurya Wedding Lawn
       </h1>
       <ul className="hidden md:flex text-gray-500 pr-5  gap-10 text-center items-center  font-serif font-bold hover:cursor-pointer">
