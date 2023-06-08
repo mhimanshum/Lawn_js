@@ -12,7 +12,7 @@ function Footer() {
             <h1 className="absolute font-sans text-white font-bold text-2xl mt-3">
               Developed By Himanshu Maurya
             </h1>
-            <h3 className="absolute font-mono text-white text-center w-80 h-28 md:w-80  mt-16">
+            <h3 className="absolute font-mono text-white text-center w-80 h-28 md:w-80  mt-12">
               Good code is its own best documentation. As you’re about to add a
               comment, ask yourself, “How can I improve the code so that this
               comment isn’t needed?” Improve the code and then document it to
