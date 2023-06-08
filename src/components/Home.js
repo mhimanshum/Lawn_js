@@ -76,14 +76,14 @@ function Home() {
                     />
                   </div>
                   <div className="flex justify-center">
-                    <div className=" flex flex-col md:flex-row gap-7 ml-20 mr-20 pb-10">
-                      <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black  w-96 h-80">
+                    <div className=" flex flex-col md:flex-row  gap-7 ml-20 mr-20 pb-10">
+                      <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-60 h-60  md:w-96 md:h-80">
                         <img src={p1} alt="p1" className="min-h-full"></img>
                       </div>
-                      <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black  w-96 h-80">
+                      <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-60 h-60   md:w-96 md:h-80">
                         <img src={p2} alt="p2" className="min-h-full"></img>
                       </div>
-                      <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black   w-96 h-80">
+                      <div className=" bg-white shadow-lg hover:-translate-y-1 hover:scale-110  duration-300 ... shadow-black w-60 h-60   md:w-96 md:h-80">
                         <img src={p3} alt="p3" className="min-h-full"></img>
                       </div>
                     </div>
