@@ -1,7 +1,6 @@
 import Branch from './Branch/Index';
 
 function Tree({ categories }) {
-  console.log(categories);
   return (
     <>
       {categories?.length > 0 && (
