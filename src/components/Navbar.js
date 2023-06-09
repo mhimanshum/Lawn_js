@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { HiHome } from 'react-icons/hi';
 import { GrClose } from 'react-icons/gr';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const handleNav = () => {
     setIsOpen(!isOpen);

@@ -10,7 +10,7 @@ function SignUp() {
       const res = await client.post('/users/signup', details);
       console.log(res);
     } catch (error) {
-      console.log(error);
+      console.log(error); 
     }
   };
   return (
